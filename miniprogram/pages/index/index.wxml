@@ -1,0 +1,21 @@
+<view class="page">
+    <view class="page__bd page__bd_spacing">
+        <view class="weui-flex">
+            <view class="weui-flex__item"><view class="placeholder">趣学</view></view>
+        </view>
+        <view class="weui-flex ">
+            <view class="weui-flex__item"><view class="placeholder index_block" bindtap='toScan'>上传(试卷/练习)</view></view>
+            <view class="weui-flex__item"><view class="placeholder index_block">错题</view></view>
+            
+        </view>
+        <view class="weui-flex">
+            <view class="weui-flex__item"><view class="placeholder index_block">学习测评</view></view>
+            <view class="weui-flex__item"><view class="placeholder index_block">个性化推荐</view></view>
+        </view>
+        <view class="weui-flex">
+            <view class="weui-flex__item"><view class="placeholder index_block">好课直播</view></view>
+            <view class="weui-flex__item"><view class="placeholder index_block">选课咨询</view></view>
+        </view>
+        
+    </view>
+</view>
