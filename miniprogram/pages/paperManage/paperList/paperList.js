@@ -16,7 +16,7 @@ Page({
   toPaperDetail: function (e) {
     var paperId = e.currentTarget.dataset.paper_id
     wx.navigateTo({
-      url: '../paperDetail/paperDetail?paperId=' + paperId
+      url: '../subjectList/subjectList?paperId=' + paperId
     })
   },
 

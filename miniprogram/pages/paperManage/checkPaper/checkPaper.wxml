@@ -1,16 +1,29 @@
 <view class="page">
     <view class="page__bd">
         <view class="weui-cells weui-cells_after-title">
-        <block wx:for="{{paper[0].subjects}}">
+        <block wx:for="{{paper[0].subjects}}" wx:key="index">
             <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active" >
             <view class="weui-cell__hd">
                 <image src="{{item.imageUrl}}"  mode='aspectFit'></image>
-                <view>
-                  <button>正确</button>
-                  <button>错误</button>
+                <view class="content-block">
+                  <image src="../../../images/triangle-right.png"  mode='aspectFit' class="tinyImg"></image>
+                  <div class="tiny-title">题目</div>
+                  <view class="line"></view>
                 </view>
-                <view>解析</view>
-                <view>答案</view>
+                
+                <view wx:for="{{item.content}}" wx:for-item="lineStr" class="main-content">{{lineStr}}</view>
+                <view class="content-block">
+                  <image src="../../../images/triangle-right.png"  mode='aspectFit' class="tinyImg"></image>
+                  <div class="tiny-title">解析</div>
+                  <view class="line"></view>
+                </view>
+
+                <view class="content-block">
+                  <image src="../../../images/triangle-right.png"  mode='aspectFit' class="tinyImg"></image>
+                  <div class="tiny-title">答案</div>
+                  <view class="line"></view>
+                </view>
+               
                 <view>点评</view>
             </view>
             

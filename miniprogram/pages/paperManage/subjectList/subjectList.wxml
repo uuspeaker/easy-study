@@ -6,7 +6,7 @@
             <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active" >
             <view class="weui-cell__hd">
                 <image src="{{item.imageUrl}}"  mode='aspectFit'></image>
-                <view wx:for="{{item.content}}" wx:for-item="lineStr">{{lineStr}}</view>
+                <!--view wx:for="{{item.content}}" wx:for-item="lineStr">{{lineStr}}</view-->
             </view>
             <view class='weui-flex__item' >
             </view>
