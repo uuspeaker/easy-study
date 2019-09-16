@@ -10,7 +10,7 @@ Page({
 
   toScan: function () {
     wx.navigateTo({
-      url: '../scan/scanSubject/scanSubject'
+      url: '../paperManage/scanSubject/scanSubject'
     })
   },
 

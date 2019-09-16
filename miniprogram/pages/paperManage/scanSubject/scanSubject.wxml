@@ -1,0 +1,14 @@
+<view class="page">
+    <view class="page__bd page__bd_spacing">
+        <view class="weui-flex">
+            <view class="weui-flex__item camera-position">
+            <view class="camera-outline" bindtap="scan">
+            <image class="camera" src="../../../images/camera.png" mode="aspectFit"></image>
+            </view></view>
+        </view>
+        <view class="weui-flex">
+            <view class="weui-flex__item" bindtap="toPaperList"><view class="placeholder">上传历史</view></view>
+        </view>
+    </view>
+</view>
+

@@ -1,0 +1,32 @@
+.placeholder{
+  margin: 5px;
+  padding: 0 10px;
+  text-align: center;
+  background-color: #F7F7F7;
+  height: 2.3em;
+  line-height: 2.3em;
+  color: rgba(0,0,0,.3);
+}
+.index_block{
+  height: 300rpx;
+  text-align: center; 
+  color: black;
+}
+.camera{
+  height: 300rpx;
+  width: 300rpx;
+  padding-top: 100rpx
+}
+.camera-outline{
+  text-align: center;
+  vertical-align: middle;
+  width: 500rpx;
+  height: 500rpx;
+  background: white;
+  border-radius: 1000rpx;
+}
+.camera-position{
+  margin-top: 200rpx;
+  margin-left: 100rpx;
+  margin-bottom: 150rpx;
+}

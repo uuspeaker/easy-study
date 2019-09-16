@@ -1,0 +1,17 @@
+.title{
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 10px; 
+}
+.small-gray {
+  padding-top: 3px;
+  font-size: 13px;
+  color: grey;
+  padding-left: 10px; 
+}
+.delete{
+  margin-left: 10rpx;
+  font-size: 13px;
+  color: #576b95;
+  
+}

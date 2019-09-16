@@ -1,7 +1,10 @@
 {
   "pages": [
+    "pages/paperManage/paperList/paperList",
+    "pages/paperManage/checkPaper/checkPaper",
+    "pages/paperManage/scanSubject/scanSubject",
     "pages/index/index",
-    "pages/scan/scanSubject/scanSubject",
+    "pages/paperManage/paperDetail/paperDetail",
     "pages/indexbak/indexbak",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
@@ -21,7 +24,7 @@
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTitleText": "趣学",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json"

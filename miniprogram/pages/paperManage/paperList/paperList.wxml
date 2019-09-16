@@ -1,0 +1,30 @@
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-cells__title">试卷清单</view>
+        <view class="weui-cells weui-cells_after-title">
+        <block wx:for="{{paperList}}" wx:key="item">
+        <template is="dataTemplate" data="{{...item}}" />
+        </block>
+        </view>
+    </view>
+</view>
+
+
+
+<template name="dataTemplate">
+    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="toPaperDetail" data-paper_id='{{_id}}'>
+        <view class="weui-cell__hd">
+            <image src="{{paperUrl}}" class="paper"></image>
+        </view>
+        <view class='weui-flex__item' style='margin-left:25rpx;'>
+          <view class="title">试卷标题</view>
+          <view class="small-gray" >2019-7-9 14:49 <text class="delete" data-paper_id='{{_id}}' catchtap="deletePaper">删除</text></view>
+          <view class='small-gray'>共{{subjects.length}}题 已批改1题</view>
+        </view>
+        <view class="weui-cell__hd">
+            <button catchtap="checkPaper" data-paper_id='{{_id}}'>批改</button>
+        </view>
+    </navigator> 
+</template>
+ 
+
