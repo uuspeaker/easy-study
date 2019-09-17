@@ -13,7 +13,8 @@ Page({
     comment: '',
     paperid: '',
     subjectId: '',
-    fileUrl: ''
+    fileUrl: '',
+    isPlay: 0
   },
 
   onLoad: function (options) {
@@ -35,7 +36,7 @@ Page({
 
   getSubjectInfo: function (paperId, subjectId) {
     wx.request({
-      url: `${config.service.ocrHost}/api/subjectInfo`,
+      url: `${config.service.ocrHost}/subjectInfo`,
       method: 'get',
       data: { paperId:paperId, subjectId: subjectId },
       success: (res) => {
@@ -52,6 +53,9 @@ Page({
     wx.showToast({
       title: '录音中',
     })
+    this.setData({
+      isPlay: 1
+    })
       recorderManager.start(config.options)
   },
 
@@ -59,6 +63,9 @@ Page({
   stopRecord: function () {
     wx.showToast({
       title: '录音结束',
+    })
+    this.setData({
+      isPlay: 0
     })
     recorderManager.stop();
   },
@@ -72,7 +79,7 @@ Page({
 
   saveComment: function () {
     wx.request({
-      url: `${config.service.ocrHost}/api/commentSubject`,
+      url: `${config.service.ocrHost}/commentSubject`,
       method: 'post',
       data: { 
         paperId: this.data.paperId, 
@@ -92,7 +99,7 @@ Page({
   saveFile: function (filePath) {
     var that = this
     const uploadTask = wx.uploadFile({
-      url: `${config.service.ocrHost}/api/uploadFile`,
+      url: `${config.service.ocrHost}/uploadFile`,
       filePath: filePath,
       name: 'file',
       success:  (result) => {

@@ -27,7 +27,7 @@ Page({
         // 上传图片
         const cloudPath = 'my-image' + filePath.match(/\.[^.]+?$/)[0]
         wx.uploadFile({
-          url: `${config.service.ocrHost}/api/upload`,
+          url: `${config.service.ocrHost}/upload`,
           filePath: filePath,
           name: 'file',
           formData: {
@@ -52,7 +52,7 @@ Page({
   parsePhoto: function (url) {
     var that = this
     qcloud.request({
-      url: `${config.service.ocrHost}/api/parsePhoto`,
+      url: `${config.service.ocrHost}/parsePhoto`,
       login: true,
       method: 'post',
       data: {

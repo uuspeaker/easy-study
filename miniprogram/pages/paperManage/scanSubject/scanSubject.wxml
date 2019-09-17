@@ -7,7 +7,7 @@
             </view></view>
         </view>
         <view class="weui-flex">
-            <view class="weui-flex__item" bindtap="toPaperList"><view class="placeholder">上传历史</view></view>
+            <view class="weui-flex__item" bindtap="toPaperList"><view class="placeholder">我的题目</view></view>
         </view>
     </view>
 </view>

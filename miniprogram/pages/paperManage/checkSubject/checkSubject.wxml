@@ -1,7 +1,6 @@
 <view class="page">
     <view class="page__bd">
-        <view class="weui-cells ">
-
+        <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" >
             <view class="">
                 <view><image src="{{subjectInfo.imageUrl}}"  mode='aspectFit'></image></view>
@@ -26,21 +25,28 @@
                
                 <view class="content-block">
                   <image src="../../../images/triangle-right.png"  mode='aspectFit' class="tinyImg"></image>
-                  <div class="tiny-title">点评</div>
+                  <div class="tiny-title">文字点评</div>
+                  <view class="line"></view>
+                </view>
+                <view class="comment-text">
+                  {{subjectInfo.commentText}}
+                </view>
+                <view class="content-block">
+                  <image src="../../../images/triangle-right.png"  mode='aspectFit' class="tinyImg"></image>
+                  <div class="tiny-title">语音点评</div>
                   <view class="line"></view>
                 </view>
                 <view class="content-block">
-                  
+                  <audio poster="" name="点评录音" author="{{subjectInfo.evaluator}}" src="{{subjectInfo.commentAudioUrl}}" id="myAudio" controls></audio>
                 </view>
-                
             </view>
-            
-            
             </view> 
-            
+            </view>
+            </view> 
+            </view> 
 
-        </view>
-        <view class="weui-cells__title">点评</view>
+    
+        <view class="weui-cells__title">文字点评</view>
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell">
                 <view class="weui-cell__bd">
@@ -48,18 +54,27 @@
                     <view class="weui-textarea-counter">0/200</view>
                 </view>
             </view>
-            
         </view>
-        <view>
-        <image src="../../../images/record.png"  mode='aspectFit' style="width:100rpx;heigth:100rpx" bindtap="startRecord">开始录音</image>
+        <view class="weui-cells__title">语音点评</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                     <block wx:if='{{isPlay == 0}}'>
+        <image  src="../../../images/record.png"  mode='aspectFit' style="width:80rpx;height:80rpx"  bindtap="startRecord">语音点评</image>
+    </block>
+    <block wx:if='{{isPlay == 1}}'>
+        <view><image src="../../../images/stop.png"  mode='aspectFit' style="width:80rpx;height:80rpx" bindtap="stopRecord"></image></view>
+    </block>
+                </view>
+            </view>
         </view>
-        <view><image src="../../../images/record.png"  mode='aspectFit' style="width:100rpx;heigth:100rpx" bindtap="stopRecord"></image>结束录音</view>
 
+   
         
 
     
-    </view>
+
     <button class="weui-btn" type="primary" bindtap="saveComment">保存</button>
-</view>
+
 
 

@@ -22,7 +22,7 @@ Page({
 
   getPaperList: function () {
     wx.request({
-      url: `${config.service.ocrHost}/api/paperList`,
+      url: `${config.service.ocrHost}/paperList`,
       method: 'get',
       data: {},
       success:(res) => {
@@ -36,7 +36,7 @@ Page({
   deletePaper: function (e) {
     var paperId = e.currentTarget.dataset.paper_id
     wx.request({
-      url: `${config.service.ocrHost}/api/paperInfo`,
+      url: `${config.service.ocrHost}/paperInfo`,
       method: 'delete',
       data: {id: paperId},
       success:(res) => {
