@@ -13,7 +13,7 @@ Page({
     this.getPaperList()
   },
 
-  toPaperDetail: function (e) {
+  toSubjectList: function (e) {
     var paperId = e.currentTarget.dataset.paper_id
     wx.navigateTo({
       url: '../subjectList/subjectList?paperId=' + paperId
@@ -22,7 +22,7 @@ Page({
 
   getPaperList: function () {
     wx.request({
-      url: `${config.service.ocrHost}/api/testPaper`,
+      url: `${config.service.ocrHost}/api/paperList`,
       method: 'get',
       data: {},
       success:(res) => {
@@ -36,7 +36,7 @@ Page({
   deletePaper: function (e) {
     var paperId = e.currentTarget.dataset.paper_id
     wx.request({
-      url: `${config.service.ocrHost}/api/testPaper`,
+      url: `${config.service.ocrHost}/api/paperInfo`,
       method: 'delete',
       data: {id: paperId},
       success:(res) => {

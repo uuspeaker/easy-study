@@ -1,8 +1,8 @@
 <view class="page">
     <view class="page__bd">
         <view class="weui-cells weui-cells_after-title">
-        <block wx:for="{{paper[0].subjects}}" wx:key="index">
-            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active" >
+
+            <view url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active" >
             <view class="weui-cell__hd">
                 <image src="{{item.imageUrl}}"  mode='aspectFit'></image>
                 <view class="content-block">
@@ -24,13 +24,17 @@
                   <view class="line"></view>
                 </view>
                
-                <view>点评</view>
+                <view class="content-block">
+                  <image src="../../../images/triangle-right.png"  mode='aspectFit' class="tinyImg"></image>
+                  <div class="tiny-title">点评</div>
+                  <view class="line"></view>
+                </view>
             </view>
             
             
-            </navigator> 
+            </view> 
             
-        </block>
+
         </view>
     </view>
 </view>
@@ -38,7 +42,7 @@
 
 
 <template name="dataTemplate">
-    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active" >
+    <view url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active" >
         <view class="weui-cell__hd">
             <image src="{{imageUrl}}"  mode='aspectFit'></image>
             <view>{{}}</view>
@@ -49,7 +53,7 @@
         </block>
          
         </view>
-    </navigator> 
+    </view> 
 </template>
  
 

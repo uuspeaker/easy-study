@@ -10,7 +10,7 @@ Page({
   },
 
   onLoad: function (options) {
-    this.getSubjectList(options.paperId)
+    this.getSubjectList(options.paperId, options.subjectId)
   },
 
   toPaperDetail: function (e) {
@@ -20,11 +20,11 @@ Page({
     })
   },
 
-  getSubjectList: function (paperId) {
+  getSubjectList: function (paperId, subjectId) {
     wx.request({
       url: `${config.service.ocrHost}/api/subjectInfo`,
       method: 'get',
-      data: { paperId: paperId },
+      data: { paperId: paperId, subjectId: subjectId },
       success: (res) => {
         console.log(res.data)
         this.setData({

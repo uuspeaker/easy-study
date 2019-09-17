@@ -12,6 +12,15 @@ var config = {
     ocrHost,
   },
 
+  options: {
+    duration: 600000,
+    sampleRate: 16000,
+    numberOfChannels: 1,
+    encodeBitRate: 51200,
+    format: 'mp3',
+    frameSize: 50
+  },
+
 };
 
 module.exports = config;
