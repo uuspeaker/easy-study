@@ -3,14 +3,14 @@
  */
 
 // 此处主机域名修改成腾讯云解决方案分配的域名
-// var ocrHost = 'http://129.211.21.250:3000';
-var ocrHost = 'http://192.168.0.109:3000';
+var host = 'http://129.211.21.250:80/api';
+// var host = 'http://10.100.168.82:3000';
 // var host = 'https://734232337.uuspeaker.com';
 
 var config = {
   // 下面的地址配合云端 Demo 工作
   service: {
-    ocrHost,
+    host,
   },
 
   options: {

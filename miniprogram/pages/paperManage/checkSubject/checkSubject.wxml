@@ -22,6 +22,15 @@
                   <div class="tiny-title">答案</div>
                   <view class="line"></view>
                 </view>
+
+                <view class="content-block">
+                  <image src="../../../images/triangle-right.png"  mode='aspectFit' class="tinyImg"></image>
+                  <div class="tiny-title">知识点</div>
+                  <view class="line"></view>
+                </view>
+                <view class="comment-text">
+                  {{subjectInfo.knowledge}}
+                </view>
                
                 <view class="content-block">
                   <image src="../../../images/triangle-right.png"  mode='aspectFit' class="tinyImg"></image>
@@ -36,38 +45,57 @@
                   <div class="tiny-title">语音点评</div>
                   <view class="line"></view>
                 </view>
-                <view class="content-block">
+                <view class="content-block" wx:if="{{subjectInfo.commentAudioUrl}}">
                   <audio poster="" name="点评录音" author="{{subjectInfo.evaluator}}" src="{{subjectInfo.commentAudioUrl}}" id="myAudio" controls></audio>
                 </view>
             </view>
-            </view> 
-            </view>
-            </view> 
-            </view> 
-
+          </view> 
+        </view>
+      </view> 
+    </view> 
+<!--知识点模糊搜索-->
+<view class="weui-cells__title">知识点</view>
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell">
+    <view class="weui-cell__bd">
+      <input id='searchInput'  type="text" bindinput="bindKeyInput" value="{{inputValue}}" data-statu="open" />
+    </view>
+  </view>
+</view>
+<!--mask-->
+<view class="input_screen" bindtap="bindKeyInput" data-statu="close" wx:if="{{showInputStatus}}"></view> 
+<!-- auto-completion  -->
+<view class="scrollview" wx:if="{{showInputStatus}}">
+  <view  wx:for="{{bindSource}}">
+    <view id="{{item}}"  class="itemview" bindtap="itemtap" data-statu="close" wx:if="{{showInputStatus}}">
+              {{item}}   
+    </view>
+  </view>
+</view>
     
-        <view class="weui-cells__title">文字点评</view>
-        <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell">
-                <view class="weui-cell__bd">
-                    <textarea class="weui-textarea" placeholder="请输入点评信息" style="height: 5.0em" bindblur="commentChange"/>
-                    <view class="weui-textarea-counter">0/200</view>
-                </view>
-            </view>
-        </view>
-        <view class="weui-cells__title">语音点评</view>
-        <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell">
-                <view class="weui-cell__bd">
-                     <block wx:if='{{isPlay == 0}}'>
+<view class="weui-cells__title">文字点评</view>
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell">
+    <view class="weui-cell__bd">
+      <textarea class="weui-textarea" placeholder="请输入点评信息" style="height: 5.0em" bindblur="commentChange"/>
+      <view class="weui-textarea-counter">0/200</view>
+    </view>
+  </view>
+</view>
+
+<view class="weui-cells__title">语音点评</view>
+<view class="weui-cells weui-cells_after-title" >
+  <view class="weui-cell">
+    <view class="weui-cell__bd">
+      <block wx:if='{{isPlay == 0}}'>
         <image  src="../../../images/record.png"  mode='aspectFit' style="width:80rpx;height:80rpx"  bindtap="startRecord">语音点评</image>
-    </block>
-    <block wx:if='{{isPlay == 1}}'>
+      </block>
+      <block wx:if='{{isPlay == 1}}'>
         <view><image src="../../../images/stop.png"  mode='aspectFit' style="width:80rpx;height:80rpx" bindtap="stopRecord"></image></view>
-    </block>
-                </view>
-            </view>
-        </view>
+      </block>
+    </view>
+  </view>
+</view>
 
    
         

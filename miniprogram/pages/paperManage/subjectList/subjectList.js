@@ -33,7 +33,7 @@ Page({
     }
     var subjectId = e.currentTarget.dataset.subject_id
     wx.request({
-      url: `${config.service.ocrHost}/checkSubject`,
+      url: `${config.service.host}/checkSubject`,
       method: 'put',
       data: { paperId: this.data.paperId, subjectId: subjectId, answer: answer },
       success: (res) => {
@@ -44,7 +44,7 @@ Page({
 
   getSubjectList: function (paperId) { 
     wx.request({
-      url: `${config.service.ocrHost}/paperInfo`,
+      url: `${config.service.host}/paperInfo`,
       method: 'get',
       data: {paperId: paperId},
       success: (res) => {

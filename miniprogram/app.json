@@ -1,8 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/paperManage/scanSubject/scanSubject",
     "pages/paperManage/paperList/paperList",
+    "pages/paperManage/scanSubject/scanSubject",
     "pages/paperManage/checkSubject/checkSubject",
     "pages/paperManage/subjectList/subjectList",
     "pages/paperManage/subjectDetail/subjectDetail",
