@@ -17,6 +17,7 @@ Page({
     isPlay: 0,
     knowledgeTree:[],
     knowlegeContent: '',
+    opType:'',
 
     showInputStatus: false,
     inputValue: '',//点击结果项之后替换到文本框的值
@@ -28,6 +29,7 @@ Page({
     console.log(options)
     this.getSubjectInfo(options.paperId, options.subjectId)
     this.setData({
+      opType: options.type,
       paperId: options.paperId,
       subjectId: options.subjectId
     })
@@ -106,7 +108,7 @@ Page({
       success: (res) => {
         console.log(res.data)
         this.setData({
-          subjectInfo: res.data
+          subjectInfo: res.data[0]
         })
       }
     })

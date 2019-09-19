@@ -1,11 +1,15 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/paperManage/paperList/paperList",
-    "pages/paperManage/scanSubject/scanSubject",
-    "pages/paperManage/checkSubject/checkSubject",
-    "pages/paperManage/subjectList/subjectList",
-    "pages/paperManage/subjectDetail/subjectDetail",
+    "pages/report/subjectReport/subjectReport",
+    
+    "pages/paper/paperList/paperList",
+    "pages/paper/scanSubject/scanSubject",
+    "pages/paper/checkSubject/checkSubject",
+    "pages/paper/subjectList/subjectList",
+    "pages/paper/wrongSubjectList/wrongSubjectList",
+    "pages/paper/subjectDetail/subjectDetail",
+
     "pages/indexbak/indexbak",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",

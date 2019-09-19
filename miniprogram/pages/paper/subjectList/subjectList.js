@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    paper: [],
+    subjectList: [],
     paperId : ''
   },
 
@@ -24,18 +24,24 @@ Page({
       url: '../checkSubject/checkSubject?paperId=' + this.data.paperId + '&subjectId=' + subjectId
     })
   },
+  toDetail: function (e) {
+    var subjectId = e.currentTarget.dataset.subject_id
+    wx.navigateTo({
+      url: '../subjectDetail/subjectDetail?paperId=' + this.data.paperId + '&subjectId=' + subjectId
+    })
+  },
 
   checkSubject(e){
     console.log(e)
-    var answer = 0
+    var isRight = 0
     if(e.detail.value == true){
-      answer = 1
+      isRight = 1
     }
     var subjectId = e.currentTarget.dataset.subject_id
     wx.request({
       url: `${config.service.host}/checkSubject`,
       method: 'put',
-      data: { paperId: this.data.paperId, subjectId: subjectId, answer: answer },
+      data: { paperId: this.data.paperId, subjectId: subjectId, isRight: isRight },
       success: (res) => {
         console.log(res.data)
       }
@@ -44,13 +50,13 @@ Page({
 
   getSubjectList: function (paperId) { 
     wx.request({
-      url: `${config.service.host}/paperInfo`,
+      url: `${config.service.host}/subjectList`,
       method: 'get',
       data: {paperId: paperId},
       success: (res) => {
-        console.log(res.data)
+        console.log('getSubjectList',res.data)
         this.setData({
-          paper: res.data
+          subjectList: res.data
         })
       }
     })

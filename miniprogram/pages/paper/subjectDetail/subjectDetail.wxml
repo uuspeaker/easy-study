@@ -1,0 +1,58 @@
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" >
+            <view class="">
+                <view><image src="{{subjectInfo.imageUrl}}"  mode='aspectFit'></image></view>
+                <view class="content-block">
+                  <image src="../../../images/triangle-right.png"  mode='aspectFit' class="tinyImg"></image>
+                  <div class="tiny-title">题目</div>
+                  <view class="line"></view>
+                </view>
+                
+                <view wx:for="{{subjectInfo.content}}" wx:for-item="lineStr" wx:key="lineStr" class="main-content">{{lineStr}}</view>
+                <view class="content-block">
+                  <image src="../../../images/triangle-right.png"  mode='aspectFit' class="tinyImg"></image>
+                  <div class="tiny-title">解析</div>
+                  <view class="line"></view>
+                </view>
+
+                <view class="content-block">
+                  <image src="../../../images/triangle-right.png"  mode='aspectFit' class="tinyImg"></image>
+                  <div class="tiny-title">答案</div>
+                  <view class="line"></view>
+                </view>
+
+                <view class="content-block">
+                  <image src="../../../images/triangle-right.png"  mode='aspectFit' class="tinyImg"></image>
+                  <div class="tiny-title">知识点</div>
+                  <view class="line"></view>
+                </view>
+                <view class="comment-text">
+                  {{subjectInfo.knowledge}}
+                </view>
+               
+                <view class="content-block">
+                  <image src="../../../images/triangle-right.png"  mode='aspectFit' class="tinyImg"></image>
+                  <div class="tiny-title">文字点评</div>
+                  <view class="line"></view>
+                </view>
+                <view class="comment-text">
+                  {{subjectInfo.commentText}}
+                </view>
+                <view class="content-block">
+                  <image src="../../../images/triangle-right.png"  mode='aspectFit' class="tinyImg"></image>
+                  <div class="tiny-title">语音点评</div>
+                  <view class="line"></view>
+                </view>
+                <view class="content-block" wx:if="{{subjectInfo.commentAudioUrl}}">
+                  <audio poster="" name="点评录音" author="{{subjectInfo.evaluator}}" src="{{subjectInfo.commentAudioUrl}}" id="myAudio" controls></audio>
+                </view>
+            </view>
+          </view> 
+        </view>
+      </view> 
+    </view> 
+
+
+

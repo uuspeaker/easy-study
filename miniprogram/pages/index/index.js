@@ -10,7 +10,18 @@ Page({
 
   toScan: function () {
     wx.navigateTo({
-      url: '../paperManage/scanSubject/scanSubject'
+      url: '../paper/scanSubject/scanSubject'
+    })
+  },
+  toWrongSubjectList: function () {
+    wx.navigateTo({
+      url: '../paper/wrongSubjectList/wrongSubjectList'
+    })
+  },
+
+  toReport: function () {
+    wx.navigateTo({
+      url: '../report/subjectReport/subjectReport'
     })
   },
 

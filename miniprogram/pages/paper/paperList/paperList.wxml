@@ -12,14 +12,14 @@
 
 
 <template name="dataTemplate">
-    <view url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="toSubjectList" data-paper_id='{{_id}}'>
+    <view url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="toSubjectList" data-paper_id='{{paperId}}'>
         <view class="weui-cell__hd">
             <image src="{{paperUrl}}" class="paper" mode='aspectFit'></image>
         </view>
         <view class='weui-flex__item' style='margin-left:25rpx;'>
           <view class="title">试卷标题</view>
-          <view class="small-gray" >2019-7-9 14:49 <text class="delete" data-paper_id='{{_id}}' catchtap="deletePaper">删除</text></view>
-          <view class='small-gray'>共{{subjects.length}}题 已批改1题</view>
+          <view class="small-gray" >2019-7-9 14:49 <text class="delete" data-paper_id='{{paperId}}' catchtap="deletePaper">删除</text></view>
+          <view class='small-gray'>共{{subjectAmount}}题 已批改{{checkAmount?checkAmount:0}}题</view>
         </view>
     </view> 
 </template>

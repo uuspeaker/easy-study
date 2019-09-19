@@ -1,0 +1,30 @@
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-cells__title">题目清单</view>
+        <view class="weui-cells weui-cells_after-title">
+        <block wx:for="{{subjectList}}" wx:key="imageUrl">
+            <view url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active" >
+            <view class="weui-cell__hd" >
+                <image src="{{item.imageUrl}}"  mode='aspectFit' catchtap="toDetail"  data-subject_id='{{item.subjectId}}'></image>
+                <!--view wx:for="{{item.content}}" wx:for-item="lineStr">{{lineStr}}</view-->
+                <view class="weui-cell weui-cell_switch">
+                <view class="weui-cell__bd">
+                    错误  <switch checked="{{item.isRight==1?'chekced':''}}" bindchange="checkSubject" data-subject_id='{{item.subjectId}}' />  正确
+                </view>
+                <view class="weui-cell__ft"><button catchtap="toEvaluate"  data-subject_id='{{item.subjectId}}'>批改</button></view>
+            </view>
+            </view>
+            <view class="weui-cell weui-cell_switch">
+                <view class="weui-cell__bd">标题文字</view>
+                <view class="weui-cell__ft">
+                    <switch checked />
+                </view>
+            </view>
+            </view> 
+        </block>
+        </view>
+    </view>
+</view>
+
+ 
+

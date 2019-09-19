@@ -53,6 +53,7 @@
         </view>
       </view> 
     </view> 
+
 <!--知识点模糊搜索-->
 <view class="weui-cells__title">知识点</view>
 <view class="weui-cells weui-cells_after-title">
@@ -97,12 +98,6 @@
   </view>
 </view>
 
-   
-        
-
-    
-
-    <button class="weui-btn" type="primary" bindtap="saveComment">保存</button>
-
+ <button class="weui-btn" type="primary" bindtap="saveComment">保存</button>
 
 

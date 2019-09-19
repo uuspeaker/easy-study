@@ -5,11 +5,11 @@
         </view>
         <view class="weui-flex ">
             <view class="weui-flex__item"><view class="placeholder index_block" bindtap='toScan'>上传(试卷/练习)</view></view>
-            <view class="weui-flex__item"><view class="placeholder index_block">错题</view></view>
+            <view class="weui-flex__item"><view class="placeholder index_block" bindtap='toWrongSubjectList'>错题</view></view>
             
         </view>
         <view class="weui-flex">
-            <view class="weui-flex__item"><view class="placeholder index_block">学习测评</view></view>
+            <view class="weui-flex__item"><view class="placeholder index_block" bindtap='toReport'>学习测评</view></view>
             <view class="weui-flex__item"><view class="placeholder index_block">个性化推荐</view></view>
         </view>
         <view class="weui-flex">

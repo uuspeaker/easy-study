@@ -2,17 +2,10 @@
     <view class="page__bd">
         <view class="weui-cells__title">题目清单</view>
         <view class="weui-cells weui-cells_after-title">
-        <block wx:for="{{paper[0].subjects}}" wx:key="imageUrl">
+        <block wx:for="{{subjectList}}" wx:key="imageUrl">
             <view url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active" >
-            <view class="weui-cell__hd">
+            <view class="weui-cell__hd" catchtap="toEvaluate"  data-subject_id='{{item.subjectId}}'>
                 <image src="{{item.imageUrl}}"  mode='aspectFit'></image>
-                <!--view wx:for="{{item.content}}" wx:for-item="lineStr">{{lineStr}}</view-->
-                <view class="weui-cell weui-cell_switch">
-                <view class="weui-cell__bd">
-                    错误  <switch checked="{{item.answer.status==1?'chekced':''}}" bindchange="checkSubject" data-subject_id='{{item.subjectId}}' />  正确
-                </view>
-                <view class="weui-cell__ft"><button catchtap="toEvaluate"  data-subject_id='{{item.subjectId}}'>批改</button></view>
-            </view>
             </view>
             <view class="weui-cell weui-cell_switch">
                 <view class="weui-cell__bd">标题文字</view>

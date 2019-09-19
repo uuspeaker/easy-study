@@ -27,12 +27,10 @@ Page({
         // 上传图片
         const cloudPath = 'my-image' + filePath.match(/\.[^.]+?$/)[0]
         wx.uploadFile({
-          url: `${config.service.host}/upload`,
+          url: `${config.service.host}/paperInfo`,
           filePath: filePath,
           name: 'file',
-          formData: {
-            'user': '123'
-          },
+          formData: {},
           success(res) {
             wx.hideLoading()
             util.showNotice('上传成功')
@@ -45,28 +43,6 @@ Page({
       },
       fail: e => {
         console.error(e)
-      }
-    })
-  },
-
-  parsePhoto: function (url) {
-    var that = this
-    qcloud.request({
-      url: `${config.service.host}/parsePhoto`,
-      login: true,
-      method: 'post',
-      data: {
-        'url': url
-      },
-      success: (result) => {
-        console.log(result.data.data)
-      },
-      fail: (error) => {
-        util.showModel('请求失败', error);
-        console.log('request fail', error);
-        this.setData({
-          isLogin: 0
-        })
       }
     })
   },

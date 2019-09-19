@@ -1,0 +1,54 @@
+<view class="page">
+    
+    <view class="page__bd">
+        <!--view class="weui-cells__title">学习表现</view-->
+        <!--view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+              <view class="">最近完成5次学习</view>
+            </view>
+            <view class="weui-cell">
+              <view class="weui-cell__bd">做题正确率提高了30%</view>
+            </view>
+            <view class="weui-cell">
+              <view class="weui-cell__bd">最近掌握了“二次函数”，“有理数”等知识点</view>
+            </view>
+            <view class="weui-cell">
+              <view class="weui-cell__bd">做题正确率提高了30%</view>
+            </view>
+        </view-->
+
+        <view class="weui-cells__title">学习报告</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">上传次数</view>
+                <view class="weui-cell__ft">{{report.paperReport.paperAmount}} 次</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">题目总数</view>
+                <view class="weui-cell__ft">{{report.paperReport.totalSubjectAmount}} 个</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">错题个数</view>
+                <view class="weui-cell__ft">{{report.subjectReport.wrongSubjectAmount}} 个</view>
+            </view>
+        </view>
+
+        <view class="weui-cells__title">知识点弱项</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell" wx:for="{{report.subjectReport.wrongSubjectKnowledge}}" wx:key="item">
+                <view class="weui-cell__bd">{{item.knowledge}}</view>
+                <view class="weui-cell__ft">错{{item.amount}}次</view>
+            </view>
+        </view>
+
+        <view class="weui-cells__title">老师建议</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">每周完成两道二次函数练习</view>
+                <view class="weui-cell__ft"></view>
+            </view>
+        </view>
+
+
+    </view>
+</view>
