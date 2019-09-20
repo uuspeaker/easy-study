@@ -25,4 +25,10 @@ Page({
     })
   },
 
+  toLive: function () {
+    wx.navigateTo({
+      url: '../live/index/index'
+    })
+  },
+
 })

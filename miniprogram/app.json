@@ -2,6 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/report/subjectReport/subjectReport",
+    "pages/live/classroom/classroom",
+    "pages/live/classroom_new/classroom_new",
+    "pages/live/index/index",
     
     "pages/paper/paperList/paperList",
     "pages/paper/scanSubject/scanSubject",

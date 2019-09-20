@@ -13,7 +13,7 @@
             <view class="weui-flex__item"><view class="placeholder index_block">个性化推荐</view></view>
         </view>
         <view class="weui-flex">
-            <view class="weui-flex__item"><view class="placeholder index_block">好课直播</view></view>
+            <view class="weui-flex__item"><view class="placeholder index_block" bindtap="toLive">好课直播</view></view>
             <view class="weui-flex__item"><view class="placeholder index_block">选课咨询</view></view>
         </view>
         
