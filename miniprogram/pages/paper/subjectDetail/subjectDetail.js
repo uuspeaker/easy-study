@@ -15,6 +15,7 @@ Page({
     subjectId: '',
     fileUrl: '',
     isPlay: 0,
+    current: ''
   },
 
   onLoad: function (options) {
@@ -36,10 +37,12 @@ Page({
     })
   },
 
-  initRecorder: function () {
-    recorderManager.onStop((res) => {
-      tempFilePath = res.tempFilePath
-      this.saveFile(res.tempFilePath)
+  //预览图片
+  previewImage: function (e) {
+    var current = e.target.dataset.src;
+    wx.previewImage({
+      current: current,//当前点击的图片链接
+      urls: [current]
     })
   },
 
