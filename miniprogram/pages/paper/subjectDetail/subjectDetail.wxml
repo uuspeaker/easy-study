@@ -3,9 +3,9 @@
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" >
             <view class="">
-                <view><image src="{{subjectInfo.imageUrl}}"  mode='aspectFit'></image></view>
+                <view><image src="{{subjectInfo.imageUrl}}"  mode='aspectFit' data-src="{{subjectInfo.imageUrl}}" bindtap="previewImage"></image></view>
                 <view class="content-block">
-                  <image src="../../../images/triangle-right.png"  mode='aspectFit' class="tinyImg"></image>
+                  <image src="../../../images/triangle-right.png"  mode='aspectFit' class="tinyImg" ></image>
                   <div class="tiny-title">题目</div>
                   <view class="line"></view>
                 </view>
