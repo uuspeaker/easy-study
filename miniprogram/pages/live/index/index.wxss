@@ -1,11 +1,11 @@
 .container-box {
-  background-image: url(https://mc.qcloudimg.com/static/img/7da57e0050d308e2e1b1e31afbc42929/bg.png);
+
   background-color: #fff;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
   overflow: hidden;
-  color: #fff;
+
 }
 
 
@@ -23,14 +23,14 @@ button {
 .section .section_title {
   flex: 1;
   font-size: 32rpx;
-  color: #fff;
+
   text-align: right;
 }
 
 .section .section_input {
   flex: 3;
   font-size: 32rpx;
-  color: #fff;
+
   margin: 0 50rpx;
 }
 
@@ -54,8 +54,8 @@ button {
   margin-right: 10rpx;
   width: 20rpx;
   height: 20rpx;
-  border-left: 1rpx solid #fff;
-  border-top: 1rpx solid #fff;
+  border-left: 1rpx solid;
+  border-top: 1rpx solid;
   transform: rotate(225deg);
 }
 
